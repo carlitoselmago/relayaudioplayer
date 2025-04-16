@@ -37,8 +37,9 @@ def toggle_line_value(chip_path, line_offset):
 
 
 if __name__ == "__main__":
-    try:
-        for i in range(10):
+    
+    for i in range(10):
+        try:
             toggle_line_value("/dev/gpiochip0", i)
-    except OSError as ex:
-        print(ex, "\nCustomise the example configuration to suit your situation")
+        except OSError as ex:
+            print(ex, "\nCustomise the example configuration to suit your situation")
