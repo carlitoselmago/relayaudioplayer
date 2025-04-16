@@ -1,3 +1,4 @@
+import RPi.GPIO as gpio
 import os, sys
 from pyGPIO.gpio import gpio, connector
 import time
