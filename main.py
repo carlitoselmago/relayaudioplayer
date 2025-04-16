@@ -1,12 +1,13 @@
-import RPi.GPIO as gpio
+import os, sys
+from pyGPIO.gpio import gpio, connector
 import time
 
 pin=4
 
-gpio.setmode(gpio.BCM)
-gpio.setup(pin, gpio.OUT)
+gpio.setcfg(connector.GPIOp4, 1)
 
-gpio.output(pin, gpio.HIGH)
+
+gpio.output(connector.GPIOp4, 1)
 time.sleep(5)
-gpio.output(pin, gpio.LOW)
+gpio.output(connector.GPIOp4, 0)
 print("end")
