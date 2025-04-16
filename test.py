@@ -29,15 +29,16 @@ def toggle_line_value(chip_path, line_offset):
             )
         },
     ) as request:
-        while True:
-            print("{}={}".format(line_offset, value_str[value]))
-            time.sleep(1)
-            value = toggle_value(value)
-            request.set_value(line_offset, value)
+        
+        print("{}={}".format(line_offset, value_str[value]))
+        time.sleep(1)
+        value = toggle_value(value)
+        request.set_value(line_offset, value)
 
 
 if __name__ == "__main__":
     try:
-        toggle_line_value("/dev/gpiochip3", 4)
+        for i in range(10):
+            toggle_line_value("/dev/gpiochip0", i)
     except OSError as ex:
         print(ex, "\nCustomise the example configuration to suit your situation")
