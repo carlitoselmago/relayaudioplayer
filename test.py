@@ -17,7 +17,7 @@ def get_chip_info(chip_path):
 
 if __name__ == "__main__":
     try:
-        get_chip_info("/dev/gpiochip0")
+        get_chip_info("/dev/gpiochip1")
     except OSError as ex:
         print(ex, "\nCustomise the example configuration to suit your situation")
 
