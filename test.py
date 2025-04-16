@@ -37,7 +37,7 @@ def toggle_line_value(chip_path, line_offset):
 
 
 if __name__ == "__main__":
-    pins=[10,0]
+    pins=[10,0,20]
     for i in pins:
         try:
             toggle_line_value("/dev/gpiochip0", i)
