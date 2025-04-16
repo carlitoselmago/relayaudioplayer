@@ -60,6 +60,6 @@ if __name__ == "__main__":
     pins=[0,1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     for i in range(0,100):
         try:
-            toggle_line_value("/dev/gpiochip0", i)
+            toggle_line_value("/dev/gpiochip1", i)
         except OSError as ex:
             print(ex, "\nCustomise the example configuration to suit your situation")
